@@ -1,0 +1,74 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">{{'Edit account' | translate}}</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="accountName" class="col-sm-4 control-label">{{'Name' | translate}}</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="accountName" placeholder="{{'Account name' | translate}}" maxlength="25" ng-model="item.title">
+            </div>
+        </div>
+        
+<!--
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Регулярное пополнение</label>
+            <div class="col-sm-8">
+                <div class="radio">
+                    <label ng-click="seeXtra = true">
+                        <input type="radio" name='regpay'> Да
+                    </label>
+                    <label ng-click="seeXtra = false">
+                        <input type="radio" name='regpay' checked> Нет
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group" ng-if='seeXtra'>
+            <label for="sumOfPay" class="col-sm-4 control-label">Сумма платежа</label>
+            <div class="col-sm-8">
+                <input type="number" class="form-control" id="sumOfPay" placeholder="Сумма платежа" ng-model="item.regularRefillSum">
+            </div>
+        </div>
+        
+        <div class="form-group" ng-if='seeXtra'>
+            <label class="col-sm-4 control-label">Частота пополнения</label>
+            <div class="col-sm-8">
+                <select class="form-control">
+                    <option disabled selected>Частота</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group" ng-if='seeXtra'>
+            <label class="col-sm-4 control-label">Дата пополнения</label>
+            <div class="col-sm-8">
+               Датапикер   ng-model="item.dateOfRefill
+            </div>
+        </div>
+        
+        <div class="form-group" ng-if='seeXtra'>
+            <label class="col-sm-4 control-label">Выберите источник дохода</label>
+            <div class="col-sm-8">
+                <select class="form-control">
+                    <option disabled selected>Источник</option>
+                    <option ng-repeat="category in storageFactory.categories">{{category.title}}</option>
+                </select>
+            </div>
+        </div>
+-->
+        
+        <div class="form-group">
+            <div class="col-sm-12 clearfix">
+                <button class="btn btn-danger pull-left" type="button" ng-click="cancel()">{{'Cancel' | translate}}</button>
+                <button class="btn btn-primary pull-right" type="submit" ng-click="ok(item)">{{'Save' | translate}}</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!--
+<div class="modal-footer clearfix">
+        <button class="btn btn-danger pull-left" type="button" ng-click="modalCtrl.cancel()">Отмена</button>
+        <button class="btn btn-primary pull-right" type="button" ng-click="modalCtrl.ok()">Сохранить</button>
+</div>-->
